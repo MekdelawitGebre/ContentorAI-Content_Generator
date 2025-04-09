@@ -19,9 +19,12 @@ function CreateNewContent(props: PROPS) {
     (item) => item.slug == props.params["template-slug"]
   );
 
-  const GenerateAIContent = (formData: any) => {
-    // Handle content generation
-  };
+   const GenerateAIContent = (formData: any) => {
+     // Simulate content generation logic
+     const content = `Generated content based on: ${JSON.stringify(formData)}`;
+    
+   };
+
 
   return (
     <div className="p-11">
