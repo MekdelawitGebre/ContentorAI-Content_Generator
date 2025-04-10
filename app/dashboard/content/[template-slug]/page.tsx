@@ -8,6 +8,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { chatSession } from "@/utils/AiModel";
+import { create } from "domain";
+import { db } from "@/utils/db";
+import { AIOutput } from "@/utils/schema";
+import moment from "moment";
+import { useUser } from "@clerk/nextjs";
+
+
 
 interface PROPS {
   params: {
@@ -21,21 +28,30 @@ function CreateNewContent(props: PROPS) {
     (item) => item.slug == params["template-slug"]
   );
   const [loading, setLoading] = useState(false);
-  const [aiOutput, setAiOutput] = useState<String>('');
+  const [aiOutput, setAiOutput] = useState<String>("");
 
   const GenerateAIContent = async (formData: any) => {
     setLoading(true);
-      const SelectedPrompt = selectedTemplate?.aiPrompt;
-      const FinalAIPrompt = JSON.stringify(formData) + ", " + SelectedPrompt;
+    const SelectedPrompt = selectedTemplate?.aiPrompt;
+    const FinalAIPrompt = JSON.stringify(formData) + ", " + SelectedPrompt;
 
-      const result = await chatSession.sendMessage(FinalAIPrompt);
-      console.log(await result.response.text());
-   setAiOutput(result?.response.text());
-      
-      setLoading(false);
-    }
- 
+    const result = await chatSession.sendMessage(FinalAIPrompt);
+    console.log(await result.response.text());
+    setAiOutput(result?.response.text());
+    await SaveInDb(formData, selectedTemplate?.slug, result?.response.text());
+    setLoading(false);
+  };
 
+  const { user } = useUser();
+  const SaveInDb = async (formData: any, slug: any, aiResp: any) => {
+    const result = await db.insert(AIOutput).values({
+      formData: formData,
+      templateSlug: slug,
+      aiResponse: aiResp,
+      createdBy: user?.primaryEmailAddress?.emailAddress,
+      createdAt: moment().format("DD/MM/yyyy"),
+    });
+  };
   return (
     <div className="p-11">
       {/* Back Button */}
@@ -59,7 +75,7 @@ function CreateNewContent(props: PROPS) {
 
         {/* Right Side: OutputSection (spanning 2 columns on md+) */}
         <div className="col-span-2">
-          <OutputSection aiOutput={aiOutput}/>
+          <OutputSection aiOutput={aiOutput} />
         </div>
       </div>
     </div>
