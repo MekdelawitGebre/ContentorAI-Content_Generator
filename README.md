@@ -29,4 +29,4 @@ ContentorAI is a web application that helps users generate content across variou
 - **AI Integration**:
   - **Gemini**: AI model used for generating high-quality content across various formats.
 
- **Website**: https://contentorai.vercel.app/dashboard
+ **Website**: https://contentorai.vercel.app/
