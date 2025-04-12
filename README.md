@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ContentorAI
 
-## Getting Started
+ContentorAI is a web application that helps users generate content across various categories, including blog posts, social media posts, product descriptions, and more. Leveraging powerful AI-backed tools, ContentorAI provides an intuitive and efficient way to create tailored content in no time. The app also supports secure user authentication and modern, responsive design for a seamless user experience.
 
-First, run the development server:
+## Features
+- **AI-Powered Content Generation**: Generate content such as blog posts, social media posts, product descriptions, and more based on user input.
+- **Rich Text Editor**: Integrated **Toast UI Editor** to allow users to edit, format, and customize generated content in a user-friendly way.
+- **User Authentication**: Secure login and registration system implemented using **Clerk** for smooth and safe user management.
+- **Responsive UI**: Modern user interface designed with **Next.js**, **React**, and **TailwindCSS**.
+- **Powerful Backend**: Handle server-side logic and API interactions with **Node.js**.
+- **AI Models**: Leverage the **Gemini** AI for seamless and dynamic content generation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- **Frontend**:
+  - **Next.js**: Framework for building scalable React applications with server-side rendering.
+  - **React**: JavaScript library for creating interactive UIs.
+  - **TailwindCSS**: Utility-first CSS framework for creating custom designs.
+  - **Toast UI Editor**: A rich text editor for content creation, integrated for users to easily format and edit content.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication**:
+  - **Clerk**: Secure user authentication system with login, registration, and session management.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Backend**:
+  - **Node.js**: JavaScript runtime for building scalable server-side applications.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Database**:
+  - **Neon Database**: Serverless PostgreSQL database for reliable data storage.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **AI Integration**:
+  - **Gemini**: AI model used for generating high-quality content across various formats.
