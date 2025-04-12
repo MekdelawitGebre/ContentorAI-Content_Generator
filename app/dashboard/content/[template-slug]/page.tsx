@@ -8,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { chatSession } from "@/utils/AiModel";
-import { create } from "domain";
 import { db } from "@/utils/db";
 import { AIOutput } from "@/utils/schema";
 import moment from "moment";
 import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+
 
 
 
@@ -23,8 +24,9 @@ interface PROPS {
 }
 
 function CreateNewContent(props: PROPS) {
-  const params = props.params; // Unwrap the Promise
+  const params = props.params; 
   const selectedTemplate: TEMPLATE | undefined = Templates?.find(
+    
     (item) => item.slug == params["template-slug"]
   );
   const [loading, setLoading] = useState(false);
@@ -49,18 +51,26 @@ function CreateNewContent(props: PROPS) {
       templateSlug: slug,
       aiResponse: aiResp,
       createdBy: user?.primaryEmailAddress?.emailAddress,
-      createdAt: moment().format("DD/MM/yyyy"),
+      createdAt: moment().format("DD/MM/yyyy hh:mm:ss"),
     });
   };
+  const router = useRouter();
   return (
-    <div className="p-11">
+    <div className="p-4">
       {/* Back Button */}
-      <Link href="/dashboard" className="flex items-center gap-2">
-        <Button>
+      <Link href="/dashboard">
+        <Button
+          onClick={() => {
+            console.log("Back button clicked");
+            router.push("/dashboard");
+          }}
+          className="flex items-center gap-2 hover:cursor-pointer"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back
         </Button>
       </Link>
+      
 
       {/* Content Sections */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-5">
@@ -73,7 +83,6 @@ function CreateNewContent(props: PROPS) {
           loading={loading}
         />
 
-        {/* Right Side: OutputSection (spanning 2 columns on md+) */}
         <div className="col-span-2">
           <OutputSection aiOutput={aiOutput} />
         </div>

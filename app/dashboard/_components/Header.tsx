@@ -1,21 +1,35 @@
-import { Search } from 'lucide-react'
-import React from 'react'
+"use client";
+import { UserButton } from "@clerk/nextjs";
+import Image from "next/image";
+import Link from "next/link";
 
-const Header = () => {
+export function Header() {
+ 
   return (
-    <div className="p-5 shadow-sm bg-white border-b-2 flex justify-between items-center">
-      <div className="flex gap-2 items-center p-2 border rounded-md max-w-lg bg-white">
-        <Search />
-        <input type="text" placeholder="Search..." className="outline-none" />
-      </div>
+    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <div className="flex gap-2 items-center text-xl font-bold">
+          <div className="flex items-center gap-2">
+            <Link href="/dashboard">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={170}
+                height={100}
+                className="cursor-pointer"
+              />
+            </Link>
+          </div>
+        </div>
 
-      <div>
-        <h2 className="bg-primary p-l rounded-full text-xs text-white px-2">
-          🔥Join Membership just for $9
-        </h2>
+        <div className="flex flex-1 items-center justify-end space-x-4">
+          <nav className="md:flex items-center space-x-4">
+            <div className="flex items-center mr-3 scale-140">
+              <UserButton />
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
+    </header>
   );
 }
-
-export default Header

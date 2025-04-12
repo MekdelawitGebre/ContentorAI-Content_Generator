@@ -1,18 +1,21 @@
+"use client";
 import React from "react";
-import SideNav from "./_components/SideNav";
-import Header from "./_components/Header";
+// import SideNav from "./_components/SideNav";
+import {Header} from "./_components/Header";
+import { Button } from "@/components/ui/button";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-  <div className="bg-slate-100 h-screen">
-    <div className="md:w-64 hidden md:block fixed">
+    <div className="bg-slate-100 h-screen">
+      {/* <div className="md:w-64 hidden md:block fixed">
         <SideNav/>
+    </div> */}
+      <div className="w-full bg-slate-100 h ">
+        <Header />
+
+        {children}
+      </div>
     </div>
-    <div className="md:ml-64">
-      <Header/>
-    {children}
-    </div>
-    </div>
-);
+  );
 };
 export default Layout;
