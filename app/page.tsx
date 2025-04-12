@@ -44,7 +44,7 @@ export default function Home() {
             <Image src="/logo.png" alt="Logo" width={170} height={100} />
           </div>
           <Link
-            href="https://github.com/MekdelawitGebre/ai-content-generator"
+            href="https://github.com/MekdelawitGebre/ContentorAI-Content_Generator"
             target="_blank"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -58,12 +58,12 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-40 relative overflow-hidden">
+      <section className="w-full py-6 md:py-12 lg:py-16 xl:py-20 relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center gap-6 text-center max-w-[85rem] mx-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              Generate Awesome Content with{" "}
-              <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
+              Generate Content with
+              <span className="bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent"> Contentor
                 AI
               </span>
             </h1>
@@ -146,12 +146,10 @@ export default function Home() {
       <footer className="w-full border-t py-12 bg-background">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm ">
-              © 2025 ContentorAI.Built by Hanix.
-            </p>
+            <p className="text-sm ">© 2025 ContentorAI.Built by Hanix.</p>
             <div className="flex items-center gap-4">
               <Link
-                href="https://github.com/MekdelawitGebre/ai-content-generator"
+                href="https://github.com/MekdelawitGebre/ContentorAI-Content_Generator"
                 target="_blank"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
