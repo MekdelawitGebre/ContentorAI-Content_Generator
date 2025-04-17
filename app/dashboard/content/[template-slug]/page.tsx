@@ -56,11 +56,8 @@ function CreateNewContent({ params }: PROPS) {
   return (
     <div className="p-4">
       {/* Back Button */}
-      <Link href="/dashboard">
-        <Button
-          onClick={() => router.push("/dashboard")}
-          className="flex items-center gap-2 hover:cursor-pointer"
-        >
+      <Link href="/dashboard" className="flex items-center gap-2">
+        <Button className="flex items-center gap-2 hover:cursor-pointer">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back
         </Button>

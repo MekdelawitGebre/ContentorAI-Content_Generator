@@ -7,7 +7,7 @@ function SearchSection ({onSearchInput}:any){
       <h2 className="text-4xl font-bold mb-2">Explore All Models</h2>
       <p>What's on your mind to create today?</p>
       <div className="w-full flex justify-center">
-        <div className="flex gap-2 items-center p-2 border rounded-md bg-white my-5  w-[70%]">
+        <div className="flex gap-2 items-center p-2 border rounded-md bg-white my-5  w-[60%]">
           <Search className="text-primary" />
           <input
             type="text"

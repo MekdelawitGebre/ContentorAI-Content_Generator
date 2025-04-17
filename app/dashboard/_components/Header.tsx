@@ -10,7 +10,7 @@ export function Header() {
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <div className="flex gap-2 items-center text-xl font-bold">
           <div className="flex items-center gap-2">
-            <Link href="/dashboard">
+            <Link href="/">
               <Image
                 src="/logo.png"
                 alt="Logo"
