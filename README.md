@@ -11,17 +11,17 @@ ContentorAI is a web application that helps users generate content across variou
 
 ##  Tech Stack
 
-### 🔷 Frontend
+###  Frontend
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/) 
 - [TailwindCSS](https://tailwindcss.com/) 
 - [Toast UI Editor](https://ui.toast.com/tui-editor) – Markdown & WYSIWYG editor
 - [shadcn/ui](https://ui.shadcn.com/) 
 
-### 🔐 Authentication
+###  Authentication
 - [Clerk](https://clerk.dev/)
 
-### 🧠 AI Integration
+### AI Integration
 - **Gemini AI** – Used for generating dynamic, high-quality content based on user needs
 
 ### 🗄️ Backend & Database
