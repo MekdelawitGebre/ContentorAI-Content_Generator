@@ -61,7 +61,7 @@ export default [
     ],
   },
   {
-    name: "Blog Topic Ideas",
+    name: "Blog Topic",
     desc: "AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
     category: "Blog",
     icon: "https://cdn-icons-png.flaticon.com/128/11497/11497847.png",
@@ -112,7 +112,7 @@ export default [
     ],
   },
   {
-    name: "English Grammar Check",
+    name: "Grammar Checker",
     desc: "AI model  to correct your English grammar by analyzing the provided text and suggesting improved, grammatically accurate versions.",
     icon: "https://cdn-icons-png.flaticon.com/128/12596/12596700.png",
     category: "english",
@@ -129,7 +129,7 @@ export default [
     ],
   },
   {
-    name: "Instagram Hash Tag ",
+    name: "Instagram HashTag ",
     desc: "AI tool that serves as your personal blog post title writer, generating catchy and viral-worthy titles in your chosen language.",
     icon: "https://cdn-icons-png.flaticon.com/128/7045/7045432.png",
     category: "blog",
@@ -163,7 +163,7 @@ export default [
     ],
   },
   {
-    name: "Instagram Post/Reel Idea",
+    name: "Instagram Post/Reel",
     desc: "AI tool that generate New and trending instagram idea depends on your niche",
     icon: "https://cdn-icons-png.flaticon.com/128/1029/1029183.png",
     category: "instagram",
@@ -224,7 +224,7 @@ export default [
     ],
   },
   {
-    name: "Podcast Title Generator",
+    name: "Podcast Generator",
     desc: "AI-powered tool designed to help you craft catchy, creative, and shareable podcast episode titles that grab attention and boost engagement.",
     category: "Content Creation",
     icon: "https://cdn-icons-png.flaticon.com/128/2882/2882867.png", 
@@ -323,7 +323,7 @@ export default [
 }
 ,
   {
-    name: "Write Code",
+    name: "Generate Code",
     desc: "AI Model to generate programming code in any language",
     icon: "https://cdn-icons-png.flaticon.com/128/6062/6062646.png",
     category: "Coding",
@@ -362,7 +362,7 @@ export default [
     ],
   },
   {
-    name: "X Tweets",
+    name: "X(Twitter) Tweets",
     desc: "AI tool that helps you generate engaging and trending tweets for X (formerly Twitter) based on your topic, increasing audience interaction and reach.",
     category: "Social Media Tool",
     icon: "https://cdn-icons-png.flaticon.com/128/5968/5968958.png",
